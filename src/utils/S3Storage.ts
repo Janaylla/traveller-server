@@ -17,8 +17,8 @@ class S3Storage {
 
   async saveFile(filename: string): Promise<void> {
     const originalPath = path.resolve(uploadConfig.directory, filename);
-    
-    const ContentType = mime.getType(originalPath);
+    const mimeAny = mime as any
+    const ContentType = mimeAny.getType(originalPath);
 
     if (!ContentType) {
       throw new Error('File not found');
