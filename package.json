@@ -21,7 +21,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
-    "start": "tsc && node ./build/src/server.js",
+    "start": "node ./build/src/index.js",
     "migrations": "tsc && node ./build/migrations.ts"
   },
   "devDependencies": {
